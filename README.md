@@ -1,12 +1,26 @@
-# NeuroFive Machine Learning Track
+# 🚀 NeuroFive Machine Learning Track
 
-This repository contains my internship tasks completed during the **NeuroFive Solutions Machine Learning Track**.
+![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
+![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
+![Status](https://img.shields.io/badge/Status-Week%201%20Completed-success)
 
 ---
 
-## 📂 Repository Structure
+## 📖 About
 
-```
+This repository contains my work completed during the **NeuroFive Solutions Machine Learning Internship**.
+
+The tasks focus on building strong foundations in **Python, Data Analysis, Data Cleaning, Data Visualization, and Machine Learning**.
+
+---
+
+# 📂 Repository Structure
+
+```text
 Week1
 │
 ├── Task1
@@ -20,16 +34,20 @@ Week1
 
 ---
 
-# Week 1 - Task 1
-## Titanic Dataset Exploration (EDA)
+# 📅 Week 1
 
-### Objectives
+## 📌 Task 1 – Titanic Dataset Exploration (EDA)
+
+### 🎯 Objectives
+
 - Load the Titanic dataset
 - Explore the dataset
-- Display dataset information
-- Perform basic Exploratory Data Analysis (EDA)
+- Understand dataset structure
+- Identify missing values
+- Perform Exploratory Data Analysis (EDA)
 
-### Tools Used
+### 🛠️ Technologies Used
+
 - Python
 - Pandas
 - NumPy
@@ -37,22 +55,24 @@ Week1
 
 ---
 
-# Week 1 - Task 2
-## Clean & Visualize Real-World Data
+## 📌 Task 2 – Clean & Visualize Real-World Data
 
-### Objectives
+### 🎯 Objectives
+
 - Handle missing values
 - Detect outliers
 - Create visualizations
-- Analyze the factors affecting survival
+- Analyze survival patterns
 
-### Visualizations
+### 📊 Visualizations
+
 - Histogram
 - Boxplot
 - Bar Chart
 - Correlation Heatmap
 
-### Tools Used
+### 🛠️ Technologies Used
+
 - Python
 - Pandas
 - NumPy
@@ -62,14 +82,51 @@ Week1
 
 ---
 
-## Dataset
+# 📁 Dataset
 
 - Titanic Dataset (`train.csv`)
 
 ---
 
-## Author
+# 📚 Skills Learned
+
+- Data Cleaning
+- Handling Missing Values
+- Outlier Detection
+- Data Visualization
+- Exploratory Data Analysis (EDA)
+- Correlation Analysis
+- Python Programming
+- Pandas
+- Matplotlib
+- Seaborn
+
+---
+
+# 🎯 Internship Progress
+
+| Week | Task | Status |
+|------|------|--------|
+| Week 1 | Task 1 | ✅ Completed |
+| Week 1 | Task 2 | ✅ Completed |
+| Week 2 | Coming Soon | ⏳ |
+| Week 3 | Coming Soon | ⏳ |
+| Week 4 | Coming Soon | ⏳ |
+
+---
+
+# 👩‍💻 Author
 
 **Meerab Awan**
 
+BS Artificial Intelligence Student
+
 NeuroFive Solutions – Machine Learning Internship (2026)
+
+---
+
+## ⭐ Thank You
+
+Thank you for visiting this repository.
+
+If you found this repository useful, feel free to ⭐ star it.
