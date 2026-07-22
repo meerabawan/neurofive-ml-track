@@ -119,9 +119,9 @@ Week1
 
 **Meerab Awan**
 
-BS Artificial Intelligence Student
 
-NeuroFive Solutions – Machine Learning Internship (2026)
+
+
 
 ---
 
