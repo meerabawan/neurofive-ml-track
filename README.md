@@ -5,17 +5,17 @@
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-f7931e?logo=scikitlearn)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
-![Status](https://img.shields.io/badge/Status-Week%202%20Completed-success)
+![Status](https://img.shields.io/badge/Status-Week%203%20Completed-success)
 
----
+
 
 # 📖 Overview
 
 This repository contains my submissions for the **NeuroFive Machine Learning Track** internship.
 
-The projects cover the fundamentals of Machine Learning, including data exploration, data cleaning, visualization, classification, and regression using Python and Scikit-Learn.
+The projects cover the fundamentals of Machine Learning, including data exploration, data cleaning, visualization, classification, regression, model evaluation, and hyperparameter tuning using Python and Scikit-Learn.
 
----
+
 
 # 📂 Repository Structure
 
@@ -30,40 +30,51 @@ neurofive-ml-track
 │   ├── Task3
 │   └── Task4
 │
+├── Week3
+│   └── Task5
+│
 └── README.md
 ```
 
----
+
 
 # 📅 Week 1
 
 ## ✅ Task 1 – Titanic Dataset Exploration
 
-### Objectives
+### Objective
 
-- Set up Python Data Science environment
+Set up the Python Data Science environment and explore the Titanic dataset to understand its structure and features.
+
+### Workflow
+
 - Load Titanic dataset
 - Explore dataset using Pandas
-- Understand dataset structure
+- Inspect data types
 - Generate descriptive statistics
+- Identify missing values
 
 ### Skills Learned
 
 - Pandas
 - Data Exploration
 - Dataset Inspection
-- Basic Statistics
+- Descriptive Statistics
 
----
+
 
 ## ✅ Task 2 – Data Cleaning & Visualization
 
-### Objectives
+### Objective
+
+Clean the Titanic dataset and visualize important patterns using different charts.
+
+### Workflow
 
 - Handle missing values
 - Detect outliers
+- Perform feature analysis
 - Create visualizations
-- Analyze relationships between features
 
 ### Visualizations
 
@@ -75,11 +86,11 @@ neurofive-ml-track
 ### Skills Learned
 
 - Data Cleaning
-- Feature Analysis
-- Data Visualization
 - Exploratory Data Analysis (EDA)
+- Data Visualization
+- Feature Analysis
 
----
+
 
 # 📅 Week 2
 
@@ -87,7 +98,7 @@ neurofive-ml-track
 
 ### Objective
 
-Build a Machine Learning Classification model to predict whether a passenger survived the Titanic disaster.
+Build a Machine Learning classification model to predict passenger survival on the Titanic dataset.
 
 ### Workflow
 
@@ -95,29 +106,35 @@ Build a Machine Learning Classification model to predict whether a passenger sur
 - Feature Selection
 - Train-Test Split
 - Logistic Regression
-- Model Prediction
+- Model Training
+- Prediction
 - Accuracy Evaluation
+- Confusion Matrix
+
+### Evaluation Metrics
+
+- Accuracy Score
 - Confusion Matrix
 
 ### Skills Learned
 
 - Classification
 - Logistic Regression
+- Model Training
 - Model Evaluation
 - Accuracy Score
-- Confusion Matrix
 
----
 
-## ✅ Task 4 – House Price Prediction with Linear Regression
+
+## ✅ Task 4 – House Price Prediction using Linear Regression
 
 ### Objective
 
-Predict house prices using the California Housing Dataset with a Linear Regression model.
+Predict California house prices using a Linear Regression model.
 
 ### Dataset
 
-California Housing Dataset from **Scikit-Learn**
+California Housing Dataset (Scikit-Learn)
 
 ### Selected Features
 
@@ -129,8 +146,8 @@ California Housing Dataset from **Scikit-Learn**
 ### Workflow
 
 - Load Dataset
-- Explore Dataset
-- Select Features
+- Data Exploration
+- Feature Selection
 - Train-Test Split
 - Train Linear Regression Model
 - Predict House Prices
@@ -162,7 +179,69 @@ California Housing Dataset from **Scikit-Learn**
 - R² Score
 - Data Visualization
 
----
+
+
+# 📅 Week 3
+
+## ✅ Task 5 – Model Evaluation & Hyperparameter Tuning
+
+### Objective
+
+Evaluate the Titanic Survival Prediction model beyond accuracy and improve it using hyperparameter tuning.
+
+### Workflow
+
+- Load Titanic dataset
+- Data Cleaning
+- Encode Categorical Features
+- Train-Test Split
+- Train Logistic Regression Model
+- Predict Test Data
+- Calculate Accuracy
+- Generate Confusion Matrix
+- Generate Classification Report
+- Calculate Precision, Recall and F1-score
+- Explain why Accuracy alone can be misleading
+- Apply GridSearchCV
+- Tune Logistic Regression Hyperparameters
+- Compare Original and Tuned Models
+
+### Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+### Hyperparameters Tuned
+
+- C (Regularization Strength)
+- Solver
+
+### Results
+
+| Model | Accuracy |
+|--------|----------|
+| Original Logistic Regression | **81.01%** |
+| Tuned Logistic Regression | **78.21%** |
+
+### Key Learning
+
+GridSearchCV automatically searched multiple combinations of hyperparameters using cross-validation. Although the tuned model achieved slightly lower test accuracy, the experiment demonstrated that hyperparameter tuning helps identify the most suitable model configuration instead of relying on manual parameter selection.
+
+### Skills Learned
+
+- Model Evaluation
+- Precision
+- Recall
+- F1-score
+- Hyperparameter Tuning
+- GridSearchCV
+- Cross Validation
+- Performance Comparison
+
+
 
 # 🛠 Technologies Used
 
@@ -173,25 +252,50 @@ California Housing Dataset from **Scikit-Learn**
 - Scikit-Learn
 - Jupyter Notebook
 
----
-
 
 
 # 📚 Learning Outcomes
 
-Through these projects I learned:
+Through these projects, I learned:
 
 - Data Cleaning
-- Exploratory Data Analysis
+- Exploratory Data Analysis (EDA)
+- Data Visualization
+- Feature Engineering
 - Feature Selection
 - Classification
 - Regression
+- Logistic Regression
+- Linear Regression
 - Model Training
 - Model Evaluation
-- Data Visualization
+- Accuracy Score
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+- Hyperparameter Tuning
+- GridSearchCV
+- Cross Validation
 - Machine Learning Workflow
 
----
+
+
+# 📌 Repository Highlights
+
+✔ Titanic Dataset Exploration
+
+✔ Data Cleaning & Visualization
+
+✔ Titanic Survival Prediction
+
+✔ House Price Prediction
+
+✔ Model Evaluation Beyond Accuracy
+
+✔ Hyperparameter Tuning using GridSearchCV
+
+
 
 # 👩‍💻 Author
 
