@@ -16,7 +16,7 @@ The projects cover the fundamentals of Machine Learning, including data explorat
 
 # 📂 Repository Structure
 
-```text
+
 neurofive-ml-track
 │
 ├── Week1
@@ -30,6 +30,9 @@ neurofive-ml-track
 ├── Week3
 │   ├── Task5
 │   └── Task6
+│
+├── Week4
+│   └── Task7
 │
 └── README.md
 ```
