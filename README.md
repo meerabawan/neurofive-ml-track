@@ -5,7 +5,8 @@
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-f7931e?logo=scikitlearn)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
-![Status](https://img.shields.io/badge/Status-Week%203%20Tasks%20Completed-success)
+![Joblib](https://img.shields.io/badge/Joblib-Model%20Serialization-blue)
+
 
 # 📖 Overview
 
@@ -377,6 +378,111 @@ Through these projects, I learned:
 ✔ Real-World Business Problem Solving
 
 ---
+
+# 📅 Week 4
+
+## ✅ Task 7 – ML Pipeline with Feature Engineering
+
+### Objective
+
+Build a professional and reusable Machine Learning pipeline using Scikit-Learn's Pipeline and ColumnTransformer. Apply preprocessing and feature engineering in a single workflow and evaluate whether engineered features improve model performance.
+
+### Dataset
+
+Titanic Dataset
+
+### Workflow
+
+- Load Titanic dataset
+- Separate features and target variable
+- Split data into training and testing sets
+- Identify numerical and categorical features
+- Apply SimpleImputer to handle missing values
+- Apply StandardScaler to numerical features
+- Apply OneHotEncoder to categorical features
+- Build a ColumnTransformer
+- Combine preprocessing and Logistic Regression into a single Pipeline
+- Train and evaluate the baseline pipeline
+- Create new engineered features
+- Create FamilySize feature using SibSp and Parch
+- Create IsAlone feature based on FamilySize
+- Build an engineered preprocessing pipeline
+- Train and evaluate the engineered pipeline
+- Compare baseline and engineered pipeline performance
+- Save the final pipeline using Joblib
+- Load and verify the saved pipeline
+
+### Feature Engineering
+
+Two new features were created:
+
+- **FamilySize** = SibSp + Parch + 1
+- **IsAlone** = Indicates whether the passenger was traveling alone
+
+### Preprocessing
+
+Numerical features were processed using:
+
+- Median Imputation
+- StandardScaler
+
+Categorical features were processed using:
+
+- Most Frequent Imputation
+- OneHotEncoder
+
+### Model Used
+
+- Logistic Regression
+
+### Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+### Results
+
+| Model | Accuracy |
+| -------------------- | -------- |
+| Baseline Pipeline | **80.45%** |
+| Engineered Pipeline | **81.56%** |
+
+### Feature Engineering Improvement
+
+The baseline pipeline achieved **80.45%** accuracy, while the engineered pipeline achieved **81.56%** accuracy. Feature engineering improved the model performance by approximately **1.12 percentage points**.
+
+### Final Pipeline
+
+The final engineered pipeline was saved using Joblib:
+
+`titanic_ml_pipeline.joblib`
+
+The saved pipeline was successfully loaded and evaluated again, confirming that the complete preprocessing and model workflow can be reused for future predictions.
+
+### Key Learning
+
+Using Scikit-Learn Pipelines makes Machine Learning workflows cleaner, reusable, consistent, and less prone to preprocessing errors and data leakage. ColumnTransformer allows different preprocessing techniques to be applied to numerical and categorical features within the same workflow.
+
+### Skills Learned
+
+- Machine Learning Pipelines
+- Scikit-Learn Pipeline
+- ColumnTransformer
+- Feature Engineering
+- StandardScaler
+- OneHotEncoder
+- SimpleImputer
+- Logistic Regression
+- Data Preprocessing
+- Model Evaluation
+- Joblib
+- Model Serialization
+- Data Leakage Prevention
+- Reusable ML Workflows
+
 
 # 👩‍💻 Author
 
