@@ -1,12 +1,20 @@
 # 🚀 NeuroFive Machine Learning Track
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
+
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?logo=pandas)
+
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)
+
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-f7931e?logo=scikitlearn)
+
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
+
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-blue)
+
+![Imbalanced-Learn](https://img.shields.io/badge/Imbalanced--Learn-SMOTE-orange)
+
 ![Joblib](https://img.shields.io/badge/Joblib-Model%20Serialization-blue)
-![XGBoost](https://img.shields.io/badge/XGBoost-Ensemble%20Learning-red)
 
 # 📖 Overview
 
@@ -34,6 +42,9 @@ neurofive-ml-track
 ├── Week4
 │   ├── Task7
 │   └── Task8
+│
+├── Week5
+│   └── Task9
 │
 └── README.md
 ```
@@ -504,6 +515,153 @@ Among the four tested models, Logistic Regression and Random Forest achieved the
 
 ---
 
+---
+
+# 📅 Week 5
+
+## ✅ Task 9 – Handling Imbalanced Data with SMOTE
+
+### 🎯 Objective
+
+Handle severe class imbalance in a real-world **Credit Card Fraud Detection** dataset and evaluate how different class distributions affect Machine Learning performance.
+
+The main goal was to understand why accuracy alone can be misleading for imbalanced classification problems and to improve minority-class detection using **SMOTE (Synthetic Minority Over-sampling Technique)**.
+
+### 📊 Dataset
+
+**Credit Card Fraud Detection Dataset (Kaggle)**
+
+The dataset contains highly imbalanced transaction classes:
+
+| Class | Description | Samples | Percentage |
+| ----- | ----------- | ------: | ---------: |
+| 0 | Non-Fraud | 284,315 | 99.83% |
+| 1 | Fraud | 492 | 0.17% |
+
+The dataset is therefore extremely imbalanced, with fraudulent transactions representing only **0.17%** of all transactions.
+
+### 🔍 Workflow
+
+- Load Credit Card Fraud Detection dataset
+- Explore dataset structure
+- Check class distribution
+- Visualize class imbalance
+- Split data into training and testing sets
+- Train baseline Logistic Regression model
+- Calculate Precision, Recall and F1-Score
+- Generate confusion matrix
+- Generate classification report
+- Analyze class imbalance
+- Apply SMOTE to the training data
+- Balance minority and majority classes
+- Retrain Logistic Regression using SMOTE-balanced data
+- Evaluate the SMOTE model
+- Compare baseline and SMOTE performance
+- Visualize model performance
+- Compare accuracy
+- Explain why accuracy can be misleading for imbalanced data
+
+### ⚖️ Class Imbalance
+
+The original dataset contained:
+
+- **Class 0:** 284,315 samples
+- **Class 1:** 492 samples
+
+After splitting the data, SMOTE was applied **only to the training set** to avoid data leakage.
+
+Training data before SMOTE:
+
+| Class | Samples |
+| ----- | ------: |
+| 0 | 227,451 |
+| 1 | 394 |
+
+Training data after SMOTE:
+
+| Class | Samples |
+| ----- | ------: |
+| 0 | 227,451 |
+| 1 | 227,451 |
+
+SMOTE generated synthetic minority-class samples until both classes had equal representation in the training data.
+
+### 🤖 Model Used
+
+**Logistic Regression**
+
+The same model was evaluated before and after applying SMOTE to understand the impact of class balancing.
+
+### 📈 Evaluation Metrics
+
+- Precision
+- Recall
+- F1-Score
+- Accuracy
+- Confusion Matrix
+- Classification Report
+
+### 📊 SMOTE Model Results
+
+| Metric | SMOTE |
+| ------ | ----: |
+| Precision | **0.1257** |
+| Recall | **0.8980** |
+| F1-Score | **0.2206** |
+
+The SMOTE model achieved a **Recall of 89.80%**, showing a substantial ability to detect minority-class transactions.
+
+However, Precision was **12.57%**, indicating that increasing minority-class detection also resulted in more false positives.
+
+### 💡 Why Accuracy Is Misleading
+
+Accuracy is not always a reliable metric for highly imbalanced datasets.
+
+In this dataset, **99.83% of transactions belong to Class 0**. A model could achieve very high accuracy by predicting almost every transaction as Class 0 while failing to detect fraudulent transactions.
+
+Therefore, metrics such as **Precision, Recall and F1-Score** provide a more meaningful evaluation of minority-class performance.
+
+For fraud detection, Recall is particularly important because failing to identify an actual fraudulent transaction can be more costly than incorrectly flagging a legitimate transaction.
+
+### 🔎 Key Finding
+
+Applying SMOTE improved the model's ability to detect the minority class.
+
+The SMOTE model achieved:
+
+- **89.80% Recall**
+- **12.57% Precision**
+- **22.06% F1-Score**
+
+This demonstrates the trade-off between detecting more minority-class cases and generating additional false positives.
+
+### 🧠 Key Learning
+
+This task demonstrated:
+
+- Why class imbalance is a major Machine Learning challenge
+- Why accuracy can be misleading
+- How SMOTE works
+- Why SMOTE should only be applied to training data
+- The importance of Precision, Recall and F1-Score
+- The trade-off between Recall and Precision
+- How to evaluate a model beyond accuracy
+
+### 🛠 Techniques Used
+
+- SMOTE
+- Logistic Regression
+- Class Distribution Analysis
+- Confusion Matrix
+- Classification Report
+- Precision
+- Recall
+- F1-Score
+- Accuracy Comparison
+- Data Visualization
+
+---
+
 # 🛠 Technologies Used
 
 * Python
@@ -514,7 +672,7 @@ Among the four tested models, Logistic Regression and Random Forest achieved the
 * XGBoost
 * Joblib
 * Jupyter Notebook
-
+* - imbalanced-learn
 ---
 
 # 📚 Learning Outcomes
@@ -554,6 +712,13 @@ Through these projects, I learned:
 * Customer Retention Analysis
 * Model Comparison
 * Machine Learning Workflow
+*  Handling Imbalanced Data
+* SMOTE
+* Class Imbalance Analysis
+* Fraud Detection
+* Minority Class Detection
+* Precision-Recall Trade-off
+* Imbalanced Classification
 
 ---
 
@@ -592,6 +757,14 @@ Through these projects, I learned:
 ✔ Model Performance Comparison
 
 ✔ Real-World Business Problem Solving
+
+✔ SMOTE for Minority Class Oversampling
+
+✔ Precision, Recall & F1-Score Analysis
+
+✔ Understanding Why Accuracy Can Be Misleading
+
+✔ Credit Card Fraud Detection
 
 ---
 
