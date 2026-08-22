@@ -15,7 +15,7 @@
 
 This repository contains my submissions for the **NeuroFive Machine Learning Track** internship.
 
-The projects cover the fundamentals of Machine Learning, including data exploration, data cleaning, visualization, classification, regression, model evaluation, hyperparameter tuning, feature engineering, machine learning pipelines, ensemble learning, handling imbalanced data, model serialization, and deploying a trained Machine Learning model using Streamlit.
+The projects cover the fundamentals and practical applications of Machine Learning, including data exploration, data cleaning, visualization, classification, regression, model evaluation, hyperparameter tuning, feature engineering, machine learning pipelines, ensemble learning, handling imbalanced data, model serialization, and deploying trained Machine Learning models using Streamlit.
 
 The internship focuses on developing practical Machine Learning skills through hands-on projects and real-world datasets.
 
@@ -43,6 +43,7 @@ neurofive-ml-track
 ├── Week5
 │   ├── Task9
 │   └── Task10
+│
 ├── Week6
 │   ├── app.py
 │   ├── data
@@ -56,20 +57,22 @@ neurofive-ml-track
 
 ## ✅ Task 1 – Titanic Dataset Exploration
 
-### Objective
+### 🎯 Objective
 
-Set up the Python Data Science environment and explore the Titanic dataset to understand its structure and features.
+Set up the Python Data Science environment and explore the Titanic dataset to understand its structure, features, and data quality.
 
-### Workflow
+### 🔍 Workflow
 
 * Load Titanic dataset
 * Explore dataset using Pandas
 * Inspect data types
 * Generate descriptive statistics
 * Identify missing values
+* Analyze dataset structure
 
-### Skills Learned
+### 🧠 Skills Learned
 
+* Python
 * Pandas
 * Data Exploration
 * Dataset Inspection
@@ -79,30 +82,32 @@ Set up the Python Data Science environment and explore the Titanic dataset to un
 
 ## ✅ Task 2 – Data Cleaning & Visualization
 
-### Objective
+### 🎯 Objective
 
 Clean the Titanic dataset and visualize important patterns using different charts.
 
-### Workflow
+### 🔍 Workflow
 
 * Handle missing values
 * Detect outliers
 * Perform feature analysis
 * Create visualizations
+* Analyze relationships between features
 
-### Visualizations
+### 📊 Visualizations
 
 * Histogram
 * Box Plot
 * Bar Chart
 * Correlation Heatmap
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Data Cleaning
 * Exploratory Data Analysis (EDA)
 * Data Visualization
 * Feature Analysis
+* Outlier Detection
 
 ---
 
@@ -110,11 +115,11 @@ Clean the Titanic dataset and visualize important patterns using different chart
 
 ## ✅ Task 3 – Titanic Survival Prediction
 
-### Objective
+### 🎯 Objective
 
-Build a Machine Learning classification model to predict passenger survival on the Titanic dataset.
+Build a Machine Learning classification model to predict passenger survival using the Titanic dataset.
 
-### Workflow
+### 🔍 Workflow
 
 * Data Preprocessing
 * Feature Selection
@@ -125,12 +130,12 @@ Build a Machine Learning classification model to predict passenger survival on t
 * Accuracy Evaluation
 * Confusion Matrix
 
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 * Accuracy Score
 * Confusion Matrix
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Classification
 * Logistic Regression
@@ -142,22 +147,22 @@ Build a Machine Learning classification model to predict passenger survival on t
 
 ## ✅ Task 4 – House Price Prediction using Linear Regression
 
-### Objective
+### 🎯 Objective
 
 Predict California house prices using a Linear Regression model.
 
-### Dataset
+### 📊 Dataset
 
-California Housing Dataset (Scikit-Learn)
+**California Housing Dataset** from Scikit-Learn.
 
-### Selected Features
+### 🔢 Selected Features
 
 * MedInc
 * HouseAge
 * AveRooms
 * AveOccup
 
-### Workflow
+### 🔍 Workflow
 
 * Load Dataset
 * Data Exploration
@@ -168,23 +173,23 @@ California Housing Dataset (Scikit-Learn)
 * Evaluate Model
 * Visualize Results
 
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 * RMSE (Root Mean Squared Error)
 * R² Score
 
-### Results
+### 📈 Results
 
 | Metric   |      Value |
 | -------- | ---------: |
 | RMSE     | **0.8108** |
 | R² Score | **0.4983** |
 
-### Visualization
+### 📊 Visualization
 
 * Actual vs Predicted Scatter Plot
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Regression
 * Linear Regression
@@ -199,11 +204,11 @@ California Housing Dataset (Scikit-Learn)
 
 ## ✅ Task 5 – Model Evaluation & Hyperparameter Tuning
 
-### Objective
+### 🎯 Objective
 
-Evaluate the Titanic Survival Prediction model beyond accuracy and improve it using hyperparameter tuning.
+Evaluate the Titanic Survival Prediction model beyond accuracy and improve the model using hyperparameter tuning.
 
-### Workflow
+### 🔍 Workflow
 
 * Load Titanic dataset
 * Data Cleaning
@@ -214,13 +219,13 @@ Evaluate the Titanic Survival Prediction model beyond accuracy and improve it us
 * Calculate Accuracy
 * Generate Confusion Matrix
 * Generate Classification Report
-* Calculate Precision, Recall and F1-score
+* Calculate Precision, Recall, and F1-score
 * Explain why Accuracy alone can be misleading
 * Apply GridSearchCV
 * Tune Logistic Regression Hyperparameters
 * Compare Original and Tuned Models
 
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 * Accuracy
 * Precision
@@ -228,23 +233,23 @@ Evaluate the Titanic Survival Prediction model beyond accuracy and improve it us
 * F1-score
 * Confusion Matrix
 
-### Hyperparameters Tuned
+### ⚙️ Hyperparameters Tuned
 
 * C (Regularization Strength)
 * Solver
 
-### Results
+### 📈 Results
 
 | Model                        |   Accuracy |
 | ---------------------------- | ---------: |
 | Original Logistic Regression | **81.01%** |
 | Tuned Logistic Regression    | **78.21%** |
 
-### Key Learning
+### 💡 Key Learning
 
-GridSearchCV automatically searched multiple combinations of hyperparameters using cross-validation. Although the tuned model achieved slightly lower test accuracy, the experiment demonstrated that hyperparameter tuning helps identify suitable model configurations instead of relying on manual parameter selection.
+GridSearchCV automatically searched multiple combinations of hyperparameters using cross-validation. Although the tuned model achieved slightly lower test accuracy, the experiment demonstrated how hyperparameter tuning can help identify suitable model configurations instead of relying on manual parameter selection.
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Model Evaluation
 * Precision
@@ -259,21 +264,21 @@ GridSearchCV automatically searched multiple combinations of hyperparameters usi
 
 ## ✅ Task 6 – Customer Churn Prediction using Decision Tree & Logistic Regression
 
-### Objective
+### 🎯 Objective
 
-Build a Machine Learning model to predict customer churn using the Telco Customer Churn dataset and analyze the business factors influencing customer retention.
+Build Machine Learning models to predict customer churn using the Telco Customer Churn dataset and analyze the business factors influencing customer retention.
 
-### Dataset
+### 📊 Dataset
 
-Telco Customer Churn Dataset (Kaggle)
+**Telco Customer Churn Dataset – Kaggle**
 
-### Workflow
+### 🔍 Workflow
 
 * Load Telco Customer Churn dataset
 * Explore dataset structure
 * Inspect data types
 * Identify missing values
-* Convert TotalCharges to numeric format
+* Convert `TotalCharges` to numeric format
 * Handle missing values
 * Encode target variable
 * Perform One-Hot Encoding
@@ -282,15 +287,15 @@ Telco Customer Churn Dataset (Kaggle)
 * Visualize monthly charges
 * Generate correlation heatmap
 * Check class imbalance
-* Split dataset into training and testing sets
+* Split data into training and testing sets
 * Train Logistic Regression model
 * Train Decision Tree Classifier
 * Compare model performance
-* Evaluate models using Accuracy, Precision, Recall, F1-score and Confusion Matrix
-* Identify Top 3 Important Features using Decision Tree Feature Importance
+* Evaluate models using Accuracy, Precision, Recall, F1-score, and Confusion Matrix
+* Identify top important features using Decision Tree Feature Importance
 * Prepare a business summary based on the findings
 
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 * Accuracy
 * Precision
@@ -298,31 +303,33 @@ Telco Customer Churn Dataset (Kaggle)
 * F1-score
 * Confusion Matrix
 
-### Models Used
+### 🤖 Models Used
 
 * Logistic Regression
 * Decision Tree Classifier
 
-### Top Features Influencing Customer Churn
+### ⭐ Top Features Influencing Customer Churn
 
 * Contract Type
 * Tenure
 * Monthly Charges
 
-### Business Summary
+### 💼 Business Summary
 
-The analysis showed that customers with month-to-month contracts, shorter tenure, and higher monthly charges are more likely to churn. Logistic Regression achieved strong predictive performance, while the Decision Tree model provided clear feature importance for business interpretation.
+The analysis showed that customers with month-to-month contracts, shorter tenure, and higher monthly charges are more likely to churn.
+
+Logistic Regression provided strong predictive performance, while the Decision Tree model provided clear feature importance for business interpretation.
 
 These insights can help businesses identify at-risk customers early and improve customer retention through targeted offers and long-term contract plans.
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Customer Churn Prediction
 * Decision Tree Classification
 * Logistic Regression
 * Data Preprocessing
 * One-Hot Encoding
-* Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis
 * Feature Importance
 * Business Analytics
 * Model Comparison
@@ -334,15 +341,17 @@ These insights can help businesses identify at-risk customers early and improve 
 
 ## ✅ Task 7 – ML Pipeline with Feature Engineering
 
-### Objective
+### 🎯 Objective
 
-Build a professional and reusable Machine Learning pipeline using Scikit-Learn's Pipeline and ColumnTransformer. Apply preprocessing and feature engineering in a single workflow and evaluate whether engineered features improve model performance.
+Build a professional and reusable Machine Learning pipeline using Scikit-Learn's `Pipeline` and `ColumnTransformer`.
 
-### Dataset
+The objective was to apply preprocessing and feature engineering in a single workflow and evaluate whether engineered features improve model performance.
 
-Titanic Dataset
+### 📊 Dataset
 
-### Workflow
+**Titanic Dataset**
+
+### 🔍 Workflow
 
 * Load Titanic dataset
 * Separate features and target variable
@@ -355,38 +364,38 @@ Titanic Dataset
 * Combine preprocessing and Logistic Regression into a single Pipeline
 * Train and evaluate the baseline pipeline
 * Create new engineered features
-* Create FamilySize feature using SibSp and Parch
-* Create IsAlone feature based on FamilySize
+* Create `FamilySize` using `SibSp` and `Parch`
+* Create `IsAlone` based on `FamilySize`
 * Build an engineered preprocessing pipeline
 * Train and evaluate the engineered pipeline
 * Compare baseline and engineered pipeline performance
 * Save the final pipeline using Joblib
 * Load and verify the saved pipeline
 
-### Feature Engineering
+### ⚙️ Feature Engineering
 
 Two new features were created:
 
-* **FamilySize** = SibSp + Parch + 1
+* **FamilySize** = `SibSp + Parch + 1`
 * **IsAlone** = Indicates whether the passenger was traveling alone
 
-### Preprocessing
+### 🔧 Preprocessing
 
-Numerical features:
+**Numerical Features:**
 
 * Median Imputation
 * StandardScaler
 
-Categorical features:
+**Categorical Features:**
 
 * Most Frequent Imputation
 * OneHotEncoder
 
-### Model Used
+### 🤖 Model Used
 
 * Logistic Regression
 
-### Evaluation Metrics
+### 📊 Evaluation Metrics
 
 * Accuracy
 * Precision
@@ -394,20 +403,20 @@ Categorical features:
 * F1-score
 * Confusion Matrix
 
-### Results
+### 📈 Results
 
 | Model               |   Accuracy |
 | ------------------- | ---------: |
 | Baseline Pipeline   | **80.45%** |
 | Engineered Pipeline | **81.56%** |
 
-### Feature Engineering Improvement
+### 📈 Feature Engineering Improvement
 
 The baseline pipeline achieved **80.45%** accuracy, while the engineered pipeline achieved **81.56%** accuracy.
 
 Feature engineering improved the model performance by approximately **1.12 percentage points**.
 
-### Final Pipeline
+### 💾 Final Pipeline
 
 The final engineered pipeline was saved using Joblib:
 
@@ -417,13 +426,13 @@ titanic_ml_pipeline.joblib
 
 The saved pipeline was successfully loaded and evaluated again, confirming that the complete preprocessing and model workflow can be reused for future predictions.
 
-### Key Learning
+### 💡 Key Learning
 
 Using Scikit-Learn Pipelines makes Machine Learning workflows cleaner, reusable, consistent, and less prone to preprocessing errors and data leakage.
 
-ColumnTransformer allows different preprocessing techniques to be applied to numerical and categorical features within the same workflow.
+`ColumnTransformer` allows different preprocessing techniques to be applied to numerical and categorical features within the same workflow.
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Machine Learning Pipelines
 * Scikit-Learn Pipeline
@@ -444,24 +453,24 @@ ColumnTransformer allows different preprocessing techniques to be applied to num
 
 ## ✅ Task 8 – Ensemble Learning: Random Forest vs XGBoost
 
-### Objective
+### 🎯 Objective
 
 Compare ensemble learning methods with earlier single Machine Learning models using the Titanic dataset.
 
 Random Forest and XGBoost were trained and evaluated against Logistic Regression and Decision Tree models.
 
-### Dataset
+### 📊 Dataset
 
-Titanic Dataset
+**Titanic Dataset**
 
-### Models Used
+### 🤖 Models Used
 
 * Logistic Regression
 * Decision Tree Classifier
 * Random Forest Classifier
 * XGBoost Classifier
 
-### Workflow
+### 🔍 Workflow
 
 * Load Titanic dataset
 * Data preprocessing
@@ -478,11 +487,11 @@ Titanic Dataset
 * Analyze XGBoost feature importance
 * Compare important features between both ensemble models
 
-### Evaluation Metric
+### 📊 Evaluation Metric
 
 * Accuracy
 
-### Model Comparison
+### 📈 Model Comparison
 
 | Model               | Metric   |      Score |
 | ------------------- | -------- | ---------: |
@@ -491,26 +500,26 @@ Titanic Dataset
 | Random Forest       | Accuracy | **80.45%** |
 | XGBoost             | Accuracy | **79.89%** |
 
-### Feature Importance
+### ⭐ Feature Importance
 
 Random Forest identified **Fare, Age, and Sex** as some of the most influential features for predicting Titanic passenger survival.
 
 XGBoost also identified important Titanic passenger characteristics, with the importance distribution differing from Random Forest due to the different ensemble learning strategies.
 
-### Random Forest vs XGBoost
+### 🔄 Random Forest vs XGBoost
 
-Random Forest combines multiple decision trees that are trained independently using random subsets of the data and features.
+**Random Forest** combines multiple decision trees that are trained independently using random subsets of the data and features.
 
-XGBoost builds trees sequentially, where each new tree focuses on improving the errors made by previous trees.
+**XGBoost** builds trees sequentially, where each new tree focuses on improving the errors made by previous trees.
 
-Random Forest uses a bagging approach to reduce variance and overfitting, while XGBoost uses boosting to improve prediction performance.
+Random Forest uses a **bagging** approach to reduce variance and overfitting, while XGBoost uses **boosting** to improve prediction performance.
 
 In this experiment:
 
 * Random Forest: **80.45%**
 * XGBoost: **79.89%**
 
-### Conclusion
+### 🏆 Conclusion
 
 Among the four tested models, Logistic Regression and Random Forest achieved the highest accuracy of **80.45%**.
 
@@ -518,13 +527,13 @@ XGBoost achieved **79.89%**, while Decision Tree achieved **75.98%**.
 
 The results demonstrate that ensemble models can provide competitive performance compared with traditional single models, although the best-performing model depends on the dataset and model configuration.
 
-### Files
+### 📁 Files
 
 * `ensemble_learning.ipynb`
 * `random_forest_importance.png`
 * `xgboost_importance.png`
 
-### Skills Learned
+### 🧠 Skills Learned
 
 * Ensemble Learning
 * Random Forest
@@ -553,7 +562,7 @@ The main goal was to understand why accuracy alone can be misleading for imbalan
 
 ### 📊 Dataset
 
-**Credit Card Fraud Detection Dataset (Kaggle)**
+**Credit Card Fraud Detection Dataset – Kaggle**
 
 The dataset contains highly imbalanced transaction classes:
 
@@ -562,7 +571,7 @@ The dataset contains highly imbalanced transaction classes:
 | 0     | Non-Fraud   | 284,315 |     99.83% |
 | 1     | Fraud       |     492 |      0.17% |
 
-The dataset is therefore extremely imbalanced, with fraudulent transactions representing only **0.17%** of all transactions.
+The dataset is extremely imbalanced, with fraudulent transactions representing only **0.17%** of all transactions.
 
 ### 🔍 Workflow
 
@@ -572,7 +581,7 @@ The dataset is therefore extremely imbalanced, with fraudulent transactions repr
 * Visualize class imbalance
 * Split data into training and testing sets
 * Train baseline Logistic Regression model
-* Calculate Precision, Recall and F1-Score
+* Calculate Precision, Recall, and F1-Score
 * Generate confusion matrix
 * Generate classification report
 * Analyze class imbalance
@@ -586,21 +595,21 @@ The dataset is therefore extremely imbalanced, with fraudulent transactions repr
 
 ### ⚖️ Class Imbalance
 
-Original dataset:
+**Original Dataset:**
 
-* **Class 0:** 284,315 samples
-* **Class 1:** 492 samples
+* Class 0: **284,315 samples**
+* Class 1: **492 samples**
 
 SMOTE was applied **only to the training set** to avoid data leakage.
 
-Training data before SMOTE:
+**Training Data Before SMOTE:**
 
 | Class | Samples |
 | ----- | ------: |
 | 0     | 227,451 |
 | 1     |     394 |
 
-Training data after SMOTE:
+**Training Data After SMOTE:**
 
 | Class | Samples |
 | ----- | ------: |
@@ -640,7 +649,7 @@ Accuracy is not always a reliable metric for highly imbalanced datasets.
 
 In this dataset, **99.83% of transactions belong to Class 0**. A model could achieve very high accuracy by predicting almost every transaction as Class 0 while failing to detect fraudulent transactions.
 
-Therefore, metrics such as **Precision, Recall and F1-Score** provide a more meaningful evaluation of minority-class performance.
+Therefore, metrics such as **Precision, Recall, and F1-Score** provide a more meaningful evaluation of minority-class performance.
 
 ### 🔎 Key Finding
 
@@ -662,7 +671,7 @@ This task demonstrated:
 * Why accuracy can be misleading
 * How SMOTE works
 * Why SMOTE should only be applied to training data
-* The importance of Precision, Recall and F1-Score
+* The importance of Precision, Recall, and F1-Score
 * The trade-off between Recall and Precision
 * How to evaluate a model beyond accuracy
 
@@ -687,7 +696,7 @@ This task demonstrated:
 
 Deploy a trained Machine Learning model as an interactive web application using **Streamlit**.
 
-The objective of this task was to understand how a trained Machine Learning model can be converted into a user-friendly application where users can provide inputs and receive predictions in real time.
+The objective was to understand how a trained Machine Learning model can be converted into a user-friendly application where users can provide inputs and receive predictions in real time.
 
 ### 🛠️ Technologies Used
 
@@ -737,9 +746,6 @@ streamlit run app.py
 
 After running the command, Streamlit provides a local URL that can be opened in a web browser.
 
-
-```
-
 ### 🧠 Key Learning
 
 This task demonstrated:
@@ -764,35 +770,21 @@ This task demonstrated:
 
 ---
 
-# 🛠 Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-Learn
-* XGBoost
-* Imbalanced-Learn
-* Joblib
-* Streamlit
-* Jupyter Notebook
-
----
-
 # 📅 Week 6
 
-## 🚀 Capstone Project – Credit Card Fraud Detection
+# 🚀 Capstone Project – Credit Card Fraud Detection
 
-### 🎯 Problem Statement
+## 🎯 Problem Statement
 
-Credit card fraud detection is an important real-world Machine Learning problem because fraudulent transactions are extremely rare compared with legitimate transactions. This creates a highly imbalanced classification problem where accuracy alone can be misleading.
+Credit card fraud detection is an important real-world Machine Learning problem because fraudulent transactions are extremely rare compared with legitimate transactions.
+
+This creates a highly imbalanced classification problem where accuracy alone can be misleading.
 
 The goal of this capstone project was to build an end-to-end Machine Learning solution that can identify potentially fraudulent credit card transactions, compare multiple models, select the best-performing model, and deploy it as an interactive Streamlit application.
 
-### 📊 Dataset
+## 📊 Dataset
 
-**Credit Card Fraud Detection Dataset (Kaggle)**
+**Credit Card Fraud Detection Dataset – Kaggle**
 
 The dataset contains:
 
@@ -803,7 +795,7 @@ The dataset contains:
 
 The dataset is extremely imbalanced, with fraudulent transactions representing only **0.17%** of all transactions.
 
-### 🔍 Project Workflow
+## 🔍 Project Workflow
 
 * Define the fraud detection problem
 * Load the Credit Card Fraud Detection dataset
@@ -818,7 +810,7 @@ The dataset is extremely imbalanced, with fraudulent transactions representing o
 * Train Random Forest Classifier
 * Train XGBoost Classifier
 * Evaluate all models
-* Compare Accuracy, Precision, Recall and F1-Score
+* Compare Accuracy, Precision, Recall, and F1-Score
 * Generate model performance comparison
 * Select the best-performing model
 * Generate a confusion matrix
@@ -829,14 +821,14 @@ The dataset is extremely imbalanced, with fraudulent transactions representing o
 * Generate fraud predictions
 * Test the deployed application
 
-### 🤖 Models Used
+## 🤖 Models Used
 
 * Logistic Regression
 * Weighted Logistic Regression
 * Random Forest Classifier
 * XGBoost Classifier
 
-### 📈 Model Comparison
+## 📈 Model Comparison
 
 | Model                        |   Accuracy |  Precision |     Recall |   F1-Score |
 | ---------------------------- | ---------: | ---------: | ---------: | ---------: |
@@ -845,7 +837,7 @@ The dataset is extremely imbalanced, with fraudulent transactions representing o
 | Random Forest                | **99.95%** | **96.05%** | **74.49%** | **83.91%** |
 | XGBoost                      | **99.83%** | **50.00%** | **84.69%** | **62.88%** |
 
-### 🏆 Best Model
+## 🏆 Best Model
 
 The **Random Forest Classifier** was selected as the final model based on its overall performance.
 
@@ -860,21 +852,21 @@ Its performance was:
 
 Random Forest achieved the highest F1-Score among the evaluated models while maintaining high Precision and strong Recall.
 
-### 💡 Why Accuracy Alone Is Not Enough
+## 💡 Why Accuracy Alone Is Not Enough
 
-The dataset is highly imbalanced because **99.83% of transactions are non-fraudulent** while only **0.17% are fraudulent**.
+The dataset is highly imbalanced because **99.83% of transactions are non-fraudulent**, while only **0.17% are fraudulent**.
 
 A model could achieve very high accuracy by predicting most transactions as legitimate while still missing fraudulent transactions.
 
-Therefore, **Precision, Recall and F1-Score** were considered alongside Accuracy when selecting the final model.
+Therefore, **Precision, Recall, and F1-Score** were considered alongside Accuracy when selecting the final model.
 
-### 🔎 Confusion Matrix
+## 🔎 Confusion Matrix
 
 A confusion matrix was generated for the selected Random Forest model to analyze correct and incorrect predictions for both legitimate and fraudulent transactions.
 
 This provides a more detailed understanding of the model's ability to distinguish between the two classes.
 
-### 💾 Model Serialization
+## 💾 Model Serialization
 
 The final Random Forest model was saved using Joblib:
 
@@ -884,7 +876,7 @@ fraud_detection_model.pkl
 
 The saved model is stored inside the `models` folder and is loaded by the Streamlit application during deployment.
 
-### 🌐 Streamlit Deployment
+## 🌐 Streamlit Deployment
 
 The final model was deployed as an interactive **Streamlit web application**.
 
@@ -896,7 +888,7 @@ The application allows users to enter transaction features including:
 
 The entered values are passed to the trained Random Forest model, which predicts whether the transaction appears legitimate or potentially fraudulent.
 
-### ▶️ Run the Application
+## ▶️ Run the Application
 
 Navigate to the Week6 folder and run:
 
@@ -906,22 +898,23 @@ streamlit run app.py
 
 The application will open in the browser and provide an interactive prediction interface.
 
-
-``
-
-### 📝 Case Study
+## 📝 Case Study
 
 Credit card fraud is a major challenge for financial institutions because fraudulent transactions are rare compared with legitimate transactions. This makes fraud detection a highly imbalanced classification problem where a model can achieve high accuracy while still failing to identify fraudulent transactions.
 
-For this project, the Credit Card Fraud Detection dataset was analyzed and used to develop an end-to-end Machine Learning solution. The workflow included data exploration, class imbalance analysis, preprocessing, model training, evaluation, model comparison, and deployment. Four models were evaluated: Logistic Regression, Weighted Logistic Regression, Random Forest, and XGBoost.
+For this project, the Credit Card Fraud Detection dataset was analyzed and used to develop an end-to-end Machine Learning solution. The workflow included data exploration, class imbalance analysis, preprocessing, model training, evaluation, model comparison, and deployment.
 
-Because of the severe class imbalance, the project focused on Precision, Recall and F1-Score in addition to Accuracy. Random Forest achieved the best overall performance with **99.95% Accuracy, 96.05% Precision, 74.49% Recall, and an F1-Score of 83.91%**. It was therefore selected as the final model.
+Four models were evaluated: Logistic Regression, Weighted Logistic Regression, Random Forest, and XGBoost.
+
+Because of the severe class imbalance, the project focused on Precision, Recall, and F1-Score in addition to Accuracy.
+
+Random Forest achieved the best overall performance with **99.95% Accuracy, 96.05% Precision, 74.49% Recall, and an F1-Score of 83.91%**. It was therefore selected as the final model.
 
 The trained model was serialized using Joblib and integrated into a Streamlit application. Users can enter transaction features and receive a prediction indicating whether the transaction appears legitimate or potentially fraudulent.
 
 This project demonstrates how Machine Learning can be applied to a real-world financial problem and transformed from a notebook experiment into an interactive application. It also highlights the importance of choosing appropriate evaluation metrics when working with highly imbalanced datasets.
 
-### 🧠 Key Learning
+## 🧠 Key Learning
 
 This capstone demonstrated:
 
@@ -945,7 +938,7 @@ This capstone demonstrated:
 * Interactive Machine Learning Applications
 * Real-World Machine Learning Problem Solving
 
-### 🛠️ Capstone Technologies
+## 🛠️ Capstone Technologies
 
 * Python
 * Pandas
@@ -960,6 +953,21 @@ This capstone demonstrated:
 
 ---
 
+# 🛠 Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-Learn
+* XGBoost
+* Imbalanced-Learn
+* Joblib
+* Streamlit
+* Jupyter Notebook
+
+---
 
 # 📚 Learning Outcomes
 
@@ -987,7 +995,7 @@ Through these projects, I learned:
 * Accuracy Score
 * Precision
 * Recall
-* F1-score
+* F1-Score
 * Confusion Matrix
 * Hyperparameter Tuning
 * GridSearchCV
@@ -1027,7 +1035,7 @@ Through these projects, I learned:
 
 ✔ Hyperparameter Tuning using GridSearchCV
 
-✔ Customer Churn Prediction using Machine Learning
+✔ Customer Churn Prediction
 
 ✔ Decision Tree Classification
 
@@ -1057,16 +1065,6 @@ Through these projects, I learned:
 
 ✔ Credit Card Fraud Detection
 
-✔ Machine Learning Model Deployment
-
-✔ Streamlit Web Application
-
-✔ Interactive Prediction Interface
-
-✔ End-to-End Machine Learning Capstone
-
-✔ Credit Card Fraud Detection
-
 ✔ Handling Highly Imbalanced Data
 
 ✔ Logistic Regression
@@ -1083,13 +1081,12 @@ Through these projects, I learned:
 
 ✔ Best Model Selection
 
-✔ Joblib Model Serialization
-
 ✔ Streamlit Deployment
 
 ✔ Interactive Fraud Detection Application
 
-✔ Real-World Machine Learning Case Study
+✔ End-to-End Machine Learning Capstone
+
 ---
 
 # 👩‍💻 Author
@@ -1097,9 +1094,3 @@ Through these projects, I learned:
 **Meerab Awan**
 
 ⭐ If you found this repository helpful, feel free to give it a Star.
-
----
-
-
-
-
