@@ -4,6 +4,7 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?logo=pandas)
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-f7931e?logo=scikitlearn)
+![XGBoost](https://img.shields.io/badge/XGBoost-Gradient%20Boosting-blue)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
 ![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-blue)
 ![Imbalanced-Learn](https://img.shields.io/badge/Imbalanced--Learn-SMOTE-orange)
@@ -42,6 +43,11 @@ neurofive-ml-track
 ├── Week5
 │   ├── Task9
 │   └── Task10
+├── Week6
+│   ├── app.py
+│   ├── data
+│   ├── models
+│   └── notebook
 │
 └── README.md
 ```
@@ -731,16 +737,7 @@ streamlit run app.py
 
 After running the command, Streamlit provides a local URL that can be opened in a web browser.
 
-### 📂 Task 10 Files
 
-```text
-Task10
-│
-├── app.py
-├── model_deployment.ipynb
-├── train.csv
-├── model.pkl
-└── README.md
 ```
 
 ### 🧠 Key Learning
@@ -782,6 +779,187 @@ This task demonstrated:
 * Jupyter Notebook
 
 ---
+
+# 📅 Week 6
+
+## 🚀 Capstone Project – Credit Card Fraud Detection
+
+### 🎯 Problem Statement
+
+Credit card fraud detection is an important real-world Machine Learning problem because fraudulent transactions are extremely rare compared with legitimate transactions. This creates a highly imbalanced classification problem where accuracy alone can be misleading.
+
+The goal of this capstone project was to build an end-to-end Machine Learning solution that can identify potentially fraudulent credit card transactions, compare multiple models, select the best-performing model, and deploy it as an interactive Streamlit application.
+
+### 📊 Dataset
+
+**Credit Card Fraud Detection Dataset (Kaggle)**
+
+The dataset contains:
+
+| Class | Description | Samples | Percentage |
+| ----- | ----------- | ------: | ---------: |
+| 0     | Non-Fraud   | 284,315 |     99.83% |
+| 1     | Fraud       |     492 |      0.17% |
+
+The dataset is extremely imbalanced, with fraudulent transactions representing only **0.17%** of all transactions.
+
+### 🔍 Project Workflow
+
+* Define the fraud detection problem
+* Load the Credit Card Fraud Detection dataset
+* Explore the dataset structure
+* Analyze class distribution
+* Visualize class imbalance
+* Prepare features and target variable
+* Split data into training and testing sets
+* Train a baseline Logistic Regression model
+* Apply class weighting
+* Train Weighted Logistic Regression
+* Train Random Forest Classifier
+* Train XGBoost Classifier
+* Evaluate all models
+* Compare Accuracy, Precision, Recall and F1-Score
+* Generate model performance comparison
+* Select the best-performing model
+* Generate a confusion matrix
+* Save the final Random Forest model using Joblib
+* Build a Streamlit web application
+* Load the saved model into the application
+* Accept transaction feature inputs
+* Generate fraud predictions
+* Test the deployed application
+
+### 🤖 Models Used
+
+* Logistic Regression
+* Weighted Logistic Regression
+* Random Forest Classifier
+* XGBoost Classifier
+
+### 📈 Model Comparison
+
+| Model                        |   Accuracy |  Precision |     Recall |   F1-Score |
+| ---------------------------- | ---------: | ---------: | ---------: | ---------: |
+| Logistic Regression          |   Baseline |   Baseline |   Baseline |   Baseline |
+| Weighted Logistic Regression |          — |          — |          — |          — |
+| Random Forest                | **99.95%** | **96.05%** | **74.49%** | **83.91%** |
+| XGBoost                      | **99.83%** | **50.00%** | **84.69%** | **62.88%** |
+
+### 🏆 Best Model
+
+The **Random Forest Classifier** was selected as the final model based on its overall performance.
+
+Its performance was:
+
+| Metric    |      Score |
+| --------- | ---------: |
+| Accuracy  | **99.95%** |
+| Precision | **96.05%** |
+| Recall    | **74.49%** |
+| F1-Score  | **83.91%** |
+
+Random Forest achieved the highest F1-Score among the evaluated models while maintaining high Precision and strong Recall.
+
+### 💡 Why Accuracy Alone Is Not Enough
+
+The dataset is highly imbalanced because **99.83% of transactions are non-fraudulent** while only **0.17% are fraudulent**.
+
+A model could achieve very high accuracy by predicting most transactions as legitimate while still missing fraudulent transactions.
+
+Therefore, **Precision, Recall and F1-Score** were considered alongside Accuracy when selecting the final model.
+
+### 🔎 Confusion Matrix
+
+A confusion matrix was generated for the selected Random Forest model to analyze correct and incorrect predictions for both legitimate and fraudulent transactions.
+
+This provides a more detailed understanding of the model's ability to distinguish between the two classes.
+
+### 💾 Model Serialization
+
+The final Random Forest model was saved using Joblib:
+
+```text
+fraud_detection_model.pkl
+```
+
+The saved model is stored inside the `models` folder and is loaded by the Streamlit application during deployment.
+
+### 🌐 Streamlit Deployment
+
+The final model was deployed as an interactive **Streamlit web application**.
+
+The application allows users to enter transaction features including:
+
+* Time
+* V1–V28
+* Amount
+
+The entered values are passed to the trained Random Forest model, which predicts whether the transaction appears legitimate or potentially fraudulent.
+
+### ▶️ Run the Application
+
+Navigate to the Week6 folder and run:
+
+```bash
+streamlit run app.py
+```
+
+The application will open in the browser and provide an interactive prediction interface.
+
+
+``
+
+### 📝 Case Study
+
+Credit card fraud is a major challenge for financial institutions because fraudulent transactions are rare compared with legitimate transactions. This makes fraud detection a highly imbalanced classification problem where a model can achieve high accuracy while still failing to identify fraudulent transactions.
+
+For this project, the Credit Card Fraud Detection dataset was analyzed and used to develop an end-to-end Machine Learning solution. The workflow included data exploration, class imbalance analysis, preprocessing, model training, evaluation, model comparison, and deployment. Four models were evaluated: Logistic Regression, Weighted Logistic Regression, Random Forest, and XGBoost.
+
+Because of the severe class imbalance, the project focused on Precision, Recall and F1-Score in addition to Accuracy. Random Forest achieved the best overall performance with **99.95% Accuracy, 96.05% Precision, 74.49% Recall, and an F1-Score of 83.91%**. It was therefore selected as the final model.
+
+The trained model was serialized using Joblib and integrated into a Streamlit application. Users can enter transaction features and receive a prediction indicating whether the transaction appears legitimate or potentially fraudulent.
+
+This project demonstrates how Machine Learning can be applied to a real-world financial problem and transformed from a notebook experiment into an interactive application. It also highlights the importance of choosing appropriate evaluation metrics when working with highly imbalanced datasets.
+
+### 🧠 Key Learning
+
+This capstone demonstrated:
+
+* End-to-End Machine Learning Workflow
+* Real-World Problem Definition
+* Exploratory Data Analysis
+* Class Imbalance Analysis
+* Model Training
+* Class Weighting
+* Random Forest
+* XGBoost
+* Model Evaluation
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Model Comparison
+* Model Selection
+* Joblib Model Serialization
+* Streamlit Deployment
+* Interactive Machine Learning Applications
+* Real-World Machine Learning Problem Solving
+
+### 🛠️ Capstone Technologies
+
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* XGBoost
+* Matplotlib
+* Seaborn
+* Joblib
+* Streamlit
+* Jupyter Notebook
+
+---
+
 
 # 📚 Learning Outcomes
 
@@ -885,6 +1063,33 @@ Through these projects, I learned:
 
 ✔ Interactive Prediction Interface
 
+✔ End-to-End Machine Learning Capstone
+
+✔ Credit Card Fraud Detection
+
+✔ Handling Highly Imbalanced Data
+
+✔ Logistic Regression
+
+✔ Weighted Logistic Regression
+
+✔ Random Forest
+
+✔ XGBoost
+
+✔ Model Comparison
+
+✔ Confusion Matrix
+
+✔ Best Model Selection
+
+✔ Joblib Model Serialization
+
+✔ Streamlit Deployment
+
+✔ Interactive Fraud Detection Application
+
+✔ Real-World Machine Learning Case Study
 ---
 
 # 👩‍💻 Author
