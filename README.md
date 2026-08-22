@@ -1,26 +1,22 @@
 # 🚀 NeuroFive Machine Learning Track
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
-
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange?logo=pandas)
-
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)
-
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-f7931e?logo=scikitlearn)
-
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
-
 ![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-blue)
-
 ![Imbalanced-Learn](https://img.shields.io/badge/Imbalanced--Learn-SMOTE-orange)
-
 ![Joblib](https://img.shields.io/badge/Joblib-Model%20Serialization-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Model%20Deployment-red?logo=streamlit)
 
 # 📖 Overview
 
 This repository contains my submissions for the **NeuroFive Machine Learning Track** internship.
 
-The projects cover the fundamentals of Machine Learning, including data exploration, data cleaning, visualization, classification, regression, model evaluation, hyperparameter tuning, feature engineering, machine learning pipelines, ensemble learning, and solving a real-world business problem through customer churn prediction using Python and Scikit-Learn.
+The projects cover the fundamentals of Machine Learning, including data exploration, data cleaning, visualization, classification, regression, model evaluation, hyperparameter tuning, feature engineering, machine learning pipelines, ensemble learning, handling imbalanced data, model serialization, and deploying a trained Machine Learning model using Streamlit.
+
+The internship focuses on developing practical Machine Learning skills through hands-on projects and real-world datasets.
 
 # 📂 Repository Structure
 
@@ -44,7 +40,8 @@ neurofive-ml-track
 │   └── Task8
 │
 ├── Week5
-│   └── Task9
+│   ├── Task9
+│   └── Task10
 │
 └── README.md
 ```
@@ -172,8 +169,8 @@ California Housing Dataset (Scikit-Learn)
 
 ### Results
 
-| Metric   | Value      |
-| -------- | ---------- |
+| Metric   |      Value |
+| -------- | ---------: |
 | RMSE     | **0.8108** |
 | R² Score | **0.4983** |
 
@@ -232,14 +229,14 @@ Evaluate the Titanic Survival Prediction model beyond accuracy and improve it us
 
 ### Results
 
-| Model                        | Accuracy   |
-| ---------------------------- | ---------- |
+| Model                        |   Accuracy |
+| ---------------------------- | ---------: |
 | Original Logistic Regression | **81.01%** |
 | Tuned Logistic Regression    | **78.21%** |
 
 ### Key Learning
 
-GridSearchCV automatically searched multiple combinations of hyperparameters using cross-validation. Although the tuned model achieved slightly lower test accuracy, the experiment demonstrated that hyperparameter tuning helps identify the most suitable model configuration instead of relying on manual parameter selection.
+GridSearchCV automatically searched multiple combinations of hyperparameters using cross-validation. Although the tuned model achieved slightly lower test accuracy, the experiment demonstrated that hyperparameter tuning helps identify suitable model configurations instead of relying on manual parameter selection.
 
 ### Skills Learned
 
@@ -308,7 +305,9 @@ Telco Customer Churn Dataset (Kaggle)
 
 ### Business Summary
 
-The analysis showed that customers with month-to-month contracts, shorter tenure, and higher monthly charges are more likely to churn. Logistic Regression achieved strong predictive performance, while the Decision Tree model provided clear feature importance for business interpretation. These insights can help businesses identify at-risk customers early and improve customer retention through targeted offers and long-term contract plans.
+The analysis showed that customers with month-to-month contracts, shorter tenure, and higher monthly charges are more likely to churn. Logistic Regression achieved strong predictive performance, while the Decision Tree model provided clear feature importance for business interpretation.
+
+These insights can help businesses identify at-risk customers early and improve customer retention through targeted offers and long-term contract plans.
 
 ### Skills Learned
 
@@ -367,12 +366,12 @@ Two new features were created:
 
 ### Preprocessing
 
-Numerical features were processed using:
+Numerical features:
 
 * Median Imputation
 * StandardScaler
 
-Categorical features were processed using:
+Categorical features:
 
 * Most Frequent Imputation
 * OneHotEncoder
@@ -391,26 +390,32 @@ Categorical features were processed using:
 
 ### Results
 
-| Model               | Accuracy   |
-| ------------------- | ---------- |
+| Model               |   Accuracy |
+| ------------------- | ---------: |
 | Baseline Pipeline   | **80.45%** |
 | Engineered Pipeline | **81.56%** |
 
 ### Feature Engineering Improvement
 
-The baseline pipeline achieved **80.45%** accuracy, while the engineered pipeline achieved **81.56%** accuracy. Feature engineering improved the model performance by approximately **1.12 percentage points**.
+The baseline pipeline achieved **80.45%** accuracy, while the engineered pipeline achieved **81.56%** accuracy.
+
+Feature engineering improved the model performance by approximately **1.12 percentage points**.
 
 ### Final Pipeline
 
 The final engineered pipeline was saved using Joblib:
 
-`titanic_ml_pipeline.joblib`
+```text
+titanic_ml_pipeline.joblib
+```
 
 The saved pipeline was successfully loaded and evaluated again, confirming that the complete preprocessing and model workflow can be reused for future predictions.
 
 ### Key Learning
 
-Using Scikit-Learn Pipelines makes Machine Learning workflows cleaner, reusable, consistent, and less prone to preprocessing errors and data leakage. ColumnTransformer allows different preprocessing techniques to be applied to numerical and categorical features within the same workflow.
+Using Scikit-Learn Pipelines makes Machine Learning workflows cleaner, reusable, consistent, and less prone to preprocessing errors and data leakage.
+
+ColumnTransformer allows different preprocessing techniques to be applied to numerical and categorical features within the same workflow.
 
 ### Skills Learned
 
@@ -435,7 +440,9 @@ Using Scikit-Learn Pipelines makes Machine Learning workflows cleaner, reusable,
 
 ### Objective
 
-Compare ensemble learning methods with earlier single Machine Learning models using the Titanic dataset. Random Forest and XGBoost were trained and evaluated against Logistic Regression and Decision Tree models.
+Compare ensemble learning methods with earlier single Machine Learning models using the Titanic dataset.
+
+Random Forest and XGBoost were trained and evaluated against Logistic Regression and Decision Tree models.
 
 ### Dataset
 
@@ -482,15 +489,28 @@ Titanic Dataset
 
 Random Forest identified **Fare, Age, and Sex** as some of the most influential features for predicting Titanic passenger survival.
 
-XGBoost also identified important Titanic passenger characteristics, with the importance distribution differing from Random Forest due to the different ensemble learning strategies used by the two models.
+XGBoost also identified important Titanic passenger characteristics, with the importance distribution differing from Random Forest due to the different ensemble learning strategies.
 
 ### Random Forest vs XGBoost
 
-Random Forest combines multiple decision trees that are trained independently using random subsets of the data and features. XGBoost builds trees sequentially, where each new tree focuses on improving the errors made by the previous trees. Random Forest uses a bagging approach to reduce variance and overfitting, while XGBoost uses boosting to improve prediction performance. In this experiment, Random Forest achieved **80.45%** accuracy, while XGBoost achieved **79.89%** accuracy.
+Random Forest combines multiple decision trees that are trained independently using random subsets of the data and features.
+
+XGBoost builds trees sequentially, where each new tree focuses on improving the errors made by previous trees.
+
+Random Forest uses a bagging approach to reduce variance and overfitting, while XGBoost uses boosting to improve prediction performance.
+
+In this experiment:
+
+* Random Forest: **80.45%**
+* XGBoost: **79.89%**
 
 ### Conclusion
 
-Among the four tested models, Logistic Regression and Random Forest achieved the highest accuracy of **80.45%**. XGBoost achieved **79.89%**, while Decision Tree achieved **75.98%**. The results demonstrate that ensemble models can provide competitive performance compared with traditional single models, although the best-performing model depends on the dataset and model configuration.
+Among the four tested models, Logistic Regression and Random Forest achieved the highest accuracy of **80.45%**.
+
+XGBoost achieved **79.89%**, while Decision Tree achieved **75.98%**.
+
+The results demonstrate that ensemble models can provide competitive performance compared with traditional single models, although the best-performing model depends on the dataset and model configuration.
 
 ### Files
 
@@ -515,8 +535,6 @@ Among the four tested models, Logistic Regression and Random Forest achieved the
 
 ---
 
----
-
 # 📅 Week 5
 
 ## ✅ Task 9 – Handling Imbalanced Data with SMOTE
@@ -535,56 +553,53 @@ The dataset contains highly imbalanced transaction classes:
 
 | Class | Description | Samples | Percentage |
 | ----- | ----------- | ------: | ---------: |
-| 0 | Non-Fraud | 284,315 | 99.83% |
-| 1 | Fraud | 492 | 0.17% |
+| 0     | Non-Fraud   | 284,315 |     99.83% |
+| 1     | Fraud       |     492 |      0.17% |
 
 The dataset is therefore extremely imbalanced, with fraudulent transactions representing only **0.17%** of all transactions.
 
 ### 🔍 Workflow
 
-- Load Credit Card Fraud Detection dataset
-- Explore dataset structure
-- Check class distribution
-- Visualize class imbalance
-- Split data into training and testing sets
-- Train baseline Logistic Regression model
-- Calculate Precision, Recall and F1-Score
-- Generate confusion matrix
-- Generate classification report
-- Analyze class imbalance
-- Apply SMOTE to the training data
-- Balance minority and majority classes
-- Retrain Logistic Regression using SMOTE-balanced data
-- Evaluate the SMOTE model
-- Compare baseline and SMOTE performance
-- Visualize model performance
-- Compare accuracy
-- Explain why accuracy can be misleading for imbalanced data
+* Load Credit Card Fraud Detection dataset
+* Explore dataset structure
+* Check class distribution
+* Visualize class imbalance
+* Split data into training and testing sets
+* Train baseline Logistic Regression model
+* Calculate Precision, Recall and F1-Score
+* Generate confusion matrix
+* Generate classification report
+* Analyze class imbalance
+* Apply SMOTE to the training data
+* Balance minority and majority classes
+* Retrain Logistic Regression using SMOTE-balanced data
+* Evaluate the SMOTE model
+* Compare baseline and SMOTE performance
+* Visualize model performance
+* Explain why accuracy can be misleading for imbalanced data
 
 ### ⚖️ Class Imbalance
 
-The original dataset contained:
+Original dataset:
 
-- **Class 0:** 284,315 samples
-- **Class 1:** 492 samples
+* **Class 0:** 284,315 samples
+* **Class 1:** 492 samples
 
-After splitting the data, SMOTE was applied **only to the training set** to avoid data leakage.
+SMOTE was applied **only to the training set** to avoid data leakage.
 
 Training data before SMOTE:
 
 | Class | Samples |
 | ----- | ------: |
-| 0 | 227,451 |
-| 1 | 394 |
+| 0     | 227,451 |
+| 1     |     394 |
 
 Training data after SMOTE:
 
 | Class | Samples |
 | ----- | ------: |
-| 0 | 227,451 |
-| 1 | 227,451 |
-
-SMOTE generated synthetic minority-class samples until both classes had equal representation in the training data.
+| 0     | 227,451 |
+| 1     | 227,451 |
 
 ### 🤖 Model Used
 
@@ -594,20 +609,20 @@ The same model was evaluated before and after applying SMOTE to understand the i
 
 ### 📈 Evaluation Metrics
 
-- Precision
-- Recall
-- F1-Score
-- Accuracy
-- Confusion Matrix
-- Classification Report
+* Precision
+* Recall
+* F1-Score
+* Accuracy
+* Confusion Matrix
+* Classification Report
 
 ### 📊 SMOTE Model Results
 
-| Metric | SMOTE |
-| ------ | ----: |
+| Metric    |      SMOTE |
+| --------- | ---------: |
 | Precision | **0.1257** |
-| Recall | **0.8980** |
-| F1-Score | **0.2206** |
+| Recall    | **0.8980** |
+| F1-Score  | **0.2206** |
 
 The SMOTE model achieved a **Recall of 89.80%**, showing a substantial ability to detect minority-class transactions.
 
@@ -621,17 +636,15 @@ In this dataset, **99.83% of transactions belong to Class 0**. A model could ach
 
 Therefore, metrics such as **Precision, Recall and F1-Score** provide a more meaningful evaluation of minority-class performance.
 
-For fraud detection, Recall is particularly important because failing to identify an actual fraudulent transaction can be more costly than incorrectly flagging a legitimate transaction.
-
 ### 🔎 Key Finding
 
 Applying SMOTE improved the model's ability to detect the minority class.
 
 The SMOTE model achieved:
 
-- **89.80% Recall**
-- **12.57% Precision**
-- **22.06% F1-Score**
+* **89.80% Recall**
+* **12.57% Precision**
+* **22.06% F1-Score**
 
 This demonstrates the trade-off between detecting more minority-class cases and generating additional false positives.
 
@@ -639,26 +652,118 @@ This demonstrates the trade-off between detecting more minority-class cases and 
 
 This task demonstrated:
 
-- Why class imbalance is a major Machine Learning challenge
-- Why accuracy can be misleading
-- How SMOTE works
-- Why SMOTE should only be applied to training data
-- The importance of Precision, Recall and F1-Score
-- The trade-off between Recall and Precision
-- How to evaluate a model beyond accuracy
+* Why class imbalance is a major Machine Learning challenge
+* Why accuracy can be misleading
+* How SMOTE works
+* Why SMOTE should only be applied to training data
+* The importance of Precision, Recall and F1-Score
+* The trade-off between Recall and Precision
+* How to evaluate a model beyond accuracy
 
 ### 🛠 Techniques Used
 
-- SMOTE
-- Logistic Regression
-- Class Distribution Analysis
-- Confusion Matrix
-- Classification Report
-- Precision
-- Recall
-- F1-Score
-- Accuracy Comparison
-- Data Visualization
+* SMOTE
+* Logistic Regression
+* Class Distribution Analysis
+* Confusion Matrix
+* Classification Report
+* Precision
+* Recall
+* F1-Score
+* Accuracy Comparison
+* Data Visualization
+
+---
+
+## ✅ Task 10 – Machine Learning Model Deployment with Streamlit
+
+### 🎯 Objective
+
+Deploy a trained Machine Learning model as an interactive web application using **Streamlit**.
+
+The objective of this task was to understand how a trained Machine Learning model can be converted into a user-friendly application where users can provide inputs and receive predictions in real time.
+
+### 🛠️ Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* Joblib
+* Streamlit
+* Jupyter Notebook
+
+### 🔍 Workflow
+
+* Load and preprocess the dataset
+* Train the Machine Learning model
+* Evaluate the trained model
+* Save the trained model using Joblib
+* Create a Streamlit application
+* Load the saved model into the application
+* Create an interactive user interface
+* Accept user input
+* Pass input data to the trained model
+* Generate predictions
+* Display prediction results through the web interface
+
+### 🤖 Model Performance
+
+The trained Machine Learning model achieved:
+
+**Test Accuracy: 82.12%**
+
+This means the model correctly predicted approximately **82% of the test samples**.
+
+### 🌐 Streamlit Deployment
+
+The trained model was integrated into a Streamlit web application.
+
+Users can interact with the application through a browser and provide the required input values. The application then processes the input and uses the trained Machine Learning model to generate a prediction.
+
+### ▶️ Run the Application
+
+To run the Streamlit application locally:
+
+```bash
+streamlit run app.py
+```
+
+After running the command, Streamlit provides a local URL that can be opened in a web browser.
+
+### 📂 Task 10 Files
+
+```text
+Task10
+│
+├── app.py
+├── model_deployment.ipynb
+├── train.csv
+├── model.pkl
+└── README.md
+```
+
+### 🧠 Key Learning
+
+This task demonstrated:
+
+* How to save a trained Machine Learning model
+* How to load a saved model
+* How to create a Streamlit application
+* How to connect an ML model with a web interface
+* How to accept user input
+* How to generate real-time predictions
+* Basic Machine Learning model deployment
+
+### 🚀 Deployment Skills Learned
+
+* Streamlit
+* Model Serialization
+* Joblib
+* Model Loading
+* Interactive Web Applications
+* Prediction Interfaces
+* Machine Learning Deployment
 
 ---
 
@@ -668,11 +773,14 @@ This task demonstrated:
 * Pandas
 * NumPy
 * Matplotlib
+* Seaborn
 * Scikit-Learn
 * XGBoost
+* Imbalanced-Learn
 * Joblib
+* Streamlit
 * Jupyter Notebook
-* - imbalanced-learn
+
 ---
 
 # 📚 Learning Outcomes
@@ -712,13 +820,18 @@ Through these projects, I learned:
 * Customer Retention Analysis
 * Model Comparison
 * Machine Learning Workflow
-*  Handling Imbalanced Data
+* Handling Imbalanced Data
 * SMOTE
 * Class Imbalance Analysis
 * Fraud Detection
 * Minority Class Detection
 * Precision-Recall Trade-off
 * Imbalanced Classification
+* Model Serialization
+* Joblib
+* Streamlit
+* Machine Learning Model Deployment
+* Interactive Web Applications
 
 ---
 
@@ -766,6 +879,12 @@ Through these projects, I learned:
 
 ✔ Credit Card Fraud Detection
 
+✔ Machine Learning Model Deployment
+
+✔ Streamlit Web Application
+
+✔ Interactive Prediction Interface
+
 ---
 
 # 👩‍💻 Author
@@ -773,3 +892,9 @@ Through these projects, I learned:
 **Meerab Awan**
 
 ⭐ If you found this repository helpful, feel free to give it a Star.
+
+---
+
+
+
+
